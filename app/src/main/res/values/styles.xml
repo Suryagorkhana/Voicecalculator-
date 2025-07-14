@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Calculator Button -->
+    <style name="DigitalCalcButton">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:backgroundTint">#696969</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <!-- Operator Function Button (+, −, ÷, ×) -->
+    <style name="DigitalFuncButton" parent="DigitalCalcButton">
+        <item name="android:backgroundTint">#808080</item>
+    </style>
+    <!-- Utility Button (=, C, ⌫) -->
+    <style name="DigitalUtilButton" parent="DigitalCalcButton">
+        <item name="android:backgroundTint">#2F4F4F</item>
+    </style>
+
+
+</resources>

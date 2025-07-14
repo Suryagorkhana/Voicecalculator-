@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calci</string>
+    <string-array name="functions_array">
+        <item>sin</item>
+        <item>cos</item>
+        <item>tan</item>
+        <item>log</item>
+        <item>sqrt</item>
+        <item>AND</item>
+        <item>OR</item>
+    </string-array>
+
+</resources>

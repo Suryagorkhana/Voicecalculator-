@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="?android:attr/windowBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- History View -->
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            android:background="#F1F1F1" />
+
+        <!-- Top Right Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/btnHistory"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_history"
+                android:contentDescription="History"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_share"
+                android:contentDescription="Share"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="Settings"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- Result Display -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:background="#DDDDDD"
+            android:text="Result"
+            android:gravity="end" />
+
+        <!-- Mode Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|end"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvModeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mic"
+                android:textSize="16sp"
+                android:paddingEnd="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnToggleMode"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_microphone"
+                android:contentDescription="Toggle Mode" />
+        </LinearLayout>
+
+        <!-- Voice Mode Button -->
+        <Button
+            android:id="@+id/btnVoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎤 Start Voice Input"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Physical Calculator Layout -->
+        <LinearLayout
+            android:id="@+id/layoutPhysical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Toggle Scientific Layout -->
+            <Button
+                android:id="@+id/btnToggleSci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔬 Show Scientific"
+                android:layout_marginTop="8dp" />
+
+            <!-- Scientific Buttons -->
+            <LinearLayout
+                android:id="@+id/layoutSci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_margin="4dp"
+                android:weightSum="6">
+
+                <Button
+                    android:id="@+id/btnFact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="!"
+                    style="@style/DigitalFuncButton" />
+
+                <Button
+                    android:id="@+id/btnPow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="^"
+                    style="@style/DigitalFuncButton" />
+            </LinearLayout>
+
+            <!-- Centered Main Calculator Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true"
+                    android:gravity="center">
+
+                    <Button android:id="@+id/btnClear" android:text="C" style="@style/DigitalUtilButton" />
+                    <Button android:id="@+id/btnPercent" android:text="%" style="@style/DigitalFuncButton" />
+                    <Button android:id="@+id/btnBackspace" android:text="⌫" style="@style/DigitalUtilButton" />
+                    <Button android:id="@+id/btnDiv" android:text="/" style="@style/DigitalFuncButton" />
+
+                    <Button android:id="@+id/btn7" android:text="7" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn8" android:text="8" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn9" android:text="9" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btnMul" android:text="×" style="@style/DigitalFuncButton" />
+
+                    <Button android:id="@+id/btn4" android:text="4" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn5" android:text="5" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn6" android:text="6" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btnSub" android:text="−" style="@style/DigitalFuncButton" />
+
+                    <Button android:id="@+id/btn1" android:text="1" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn2" android:text="2" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btn3" android:text="3" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btnAdd" android:text="+" style="@style/DigitalFuncButton" />
+
+                    <Button android:id="@+id/btn0" android:text="0" style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btnDot" android:text="." style="@style/DigitalCalcButton" />
+                    <Button android:id="@+id/btnEqual" android:text="=" style="@style/DigitalFuncButton"
+                        android:layout_columnSpan="2" />
+                </GridLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VoiceCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary theme colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Fix: Use Android background attribute -->
+        <item name="android:colorBackground">@color/white</item>
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+</resources>

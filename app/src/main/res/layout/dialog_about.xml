@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:id="@+id/aboutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Voice Calculator"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:id="@+id/aboutMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This multilingual voice calculator app supports basic and scientific calculations. You can speak in English, Hindi, Marathi, Gujarati, Tamil, Telugu, Kannada, or Bengali. Features include:\n\n• Light/Dark mode\n• Floating mini calculator\n• OCR-based input\n• Offline calculation engine\n• Scientific functions\n\nDeveloped for Android using Kotlin."
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#444444" />
+</LinearLayout>
