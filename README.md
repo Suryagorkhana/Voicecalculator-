@@ -15,7 +15,6 @@ A powerful multilingual scientific calculator Android app that supports **voice 
 
 - **Kotlin**
 - **Android Studio**
-- **ML Kit (OCR for Devanagari & Latin)**
 - **Symja Math Engine**
 - **Text-to-Speech (TTS)**
 - **Git & GitHub**
